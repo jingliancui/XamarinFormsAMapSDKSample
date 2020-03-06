@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="SampleApp.MainPage"
+    Title="AMapSample"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true">    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" x:Name="MapSampleBtn" Clicked="MapSampleBtn_Clicked" Text="MapSample"></Button>
+        <Button Grid.Row="1" x:Name="LocationSampleBtn" Clicked="LocationSampleBtn_Clicked" Text="LocationSample"></Button>
+        <Button Grid.Row="2" x:Name="NaviSampleBtn" Clicked="NaviSampleBtn_Clicked" Text="NaviSample"></Button>
+        <Button Grid.Row="3" x:Name="TrackSampleBtn" Clicked="TrackSampleBtn_Clicked" Text="TrackSample"></Button>
+    </Grid>
+</ContentPage>

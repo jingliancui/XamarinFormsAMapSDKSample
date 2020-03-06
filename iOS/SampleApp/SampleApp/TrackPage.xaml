@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SampleApp.TrackPage"
+    Title="TrackSample"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0" Text="OnStartService:"></Label>
+            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Row="1" Grid.Column="0" Text="OnStartPack:"></Label>
+            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Row="2" Grid.Column="0" Text="OnStopService:"></Label>
+            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Row="3" Grid.Column="0" Text="OnStopPack:"></Label>
+
+            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1" x:Name="OnStartServiceLabel"></Label>
+            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Row="1" Grid.Column="1" x:Name="OnStartPackLabel"></Label>
+            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Row="2" Grid.Column="1" x:Name="OnStopServiceLabel"></Label>
+            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Row="3" Grid.Column="1" x:Name="OnStopPackLabel"></Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
