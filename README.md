@@ -1,6 +1,12 @@
 # XamarinFormsAMapSDKSample
 Sample for showing AMap SDK on xamarin.forms
 
+Device test passed status :
+
+iphone5s
+
+iphone11
+
 Tutorial:
 
 https://mp.weixin.qq.com/s/dsSTcIwnNK80pXQhBZwcVQ
