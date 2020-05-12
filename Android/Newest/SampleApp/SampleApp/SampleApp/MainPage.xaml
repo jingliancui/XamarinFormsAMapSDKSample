@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"             
+             x:Class="SampleApp.MainPage"
+             Title="Menu">
+
+    <StackLayout Orientation="Vertical">
+        <Button Text="map" x:Name="MapBtn" Clicked="MapBtn_Clicked"></Button>
+        <Button Text="navi" x:Name="NaviBtn" Clicked="NaviBtn_Clicked"></Button>
+        <Button Text="track" x:Name="TrackBtn" Clicked="TrackBtn_Clicked"></Button>
+        <Button Text="search" x:Name="SearchBtn" Clicked="SearchBtn_Clicked"></Button>
+    </StackLayout>
+    
+
+</ContentPage>

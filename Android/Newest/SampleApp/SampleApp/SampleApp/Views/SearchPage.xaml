@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SampleApp.Views.SearchPage"
+             Title="Search">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="其他数据搜索功能请参照官方文档自行实现"></Label>
+            <Label Text="本示例只作天气查询演示"></Label>
+            <Button Text="Weather Query" x:Name="WeatherBtn" Clicked="WeatherBtn_Clicked"></Button>
+            <Label Text="北京天气"></Label>
+            <Label x:Name="ReportTimeLabel"></Label>
+            <Label x:Name="WeatherLabel"></Label>
+            <Label x:Name="TemperatureLabel"></Label>
+            <Label x:Name="WindDirectionLabel"></Label>
+            <Label x:Name="WindPowerLabel"></Label>
+            <Label x:Name="HumidityLabel"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
