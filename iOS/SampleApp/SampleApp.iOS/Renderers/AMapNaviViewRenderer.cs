@@ -1,4 +1,5 @@
 ﻿using System;
+using AMapNaviKit;
 using Foundation;
 using SampleApp.Controls;
 using SampleApp.iOS.Renderers;
@@ -24,7 +25,7 @@ namespace SampleApp.iOS.Renderers
                     Delegate = new SampleAppNaviDriveViewDelegate()
                 };
             }
-
+            
             AMapNaviKit.AMapNaviDriveManager.SharedInstance.AddDataRepresentative(driveView);
 
             var startPoint = new AMapNaviKit.AMapNaviPoint { Latitude = 39.98f, Longitude = 116.47f };

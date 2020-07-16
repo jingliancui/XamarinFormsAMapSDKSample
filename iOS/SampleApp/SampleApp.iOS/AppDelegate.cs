@@ -34,7 +34,7 @@ namespace SampleApp.iOS
             var aMapNaviKit = AMapNaviKit.Constants.AMapNaviVersion;
             var internalMaMapKitVersion = AMapNaviKit.Constants.MAMapKitVersion;
             var aMapTrackVersion = AMapTrackKit.Constants.AMapTrackVersion;
-            AMapServices.SharedServices.ApiKey = "填写你申请的key";
+            AMapServices.SharedServices.ApiKey = "56cbca8b30538225b789aa8a4a8c86de";
             AMapServices.SharedServices.EnableHTTPS = true;
 
             locationManager = new AMapLocationKit.AMapLocationManager
@@ -75,27 +75,27 @@ namespace SampleApp.iOS
     }
 
     public class SampleAppTrackManagerDelegate : AMapTrackKit.AMapTrackManagerDelegate
-    {
-        [Export("onStartService:")]
-        public void OnStartService(AMapTrackKit.AMapTrackErrorCode errorCode)
+    {        
+        //[Export("onStartService:")]
+        public override void OnStartService(AMapTrackKit.AMapTrackErrorCode errorCode)
         {
             MessagingCenter.Send(new object(), "trackresult1", errorCode.ToString());
         }
 
-        [Export("onStartGatherAndPack:")]
-        public void OnStartGatherAndPack(AMapTrackKit.AMapTrackErrorCode errorCode)
+        //[Export("onStartGatherAndPack:")]
+        public override void OnStartGatherAndPack(AMapTrackKit.AMapTrackErrorCode errorCode)
         {
             MessagingCenter.Send(new object(), "trackresult2", errorCode.ToString());
         }
 
-        [Export("onStopService:")]
-        public void OnStopService(AMapTrackKit.AMapTrackErrorCode errorCode)
+        //[Export("onStopService:")]
+        public override void OnStopService(AMapTrackKit.AMapTrackErrorCode errorCode)
         {
             MessagingCenter.Send(new object(), "trackresult3", errorCode.ToString());
         }
 
-        [Export("onStopGatherAndPack:")]
-        public void OnStopGatherAndPack(AMapTrackKit.AMapTrackErrorCode errorCode)
+        //[Export("onStopGatherAndPack:")]
+        public override void OnStopGatherAndPack(AMapTrackKit.AMapTrackErrorCode errorCode)
         {
             MessagingCenter.Send(new object(), "trackresult4", errorCode.ToString());
         }
@@ -103,11 +103,14 @@ namespace SampleApp.iOS
 
     public class SampleAppLocationManagerDelegate : AMapLocationManagerDelegate
     {
-        public override void AmapLocationManagerDoRequireLocationAuth(AMapLocationManager manager, CLLocationManager locationManager)
+        //Auth
+        public override void AmapLocationManager(AMapLocationManager manager, CLLocationManager locationManager)
         {
             locationManager.RequestAlwaysAuthorization();
         }
-        public override void AmapLocationManagerDidUpdateLocationReGeocode(AMapLocationManager manager, CLLocation location, AMapLocationReGeocode reGeocode)
+
+        //DidUpdateLocationReGeocode
+        public override void AmapLocationManager(AMapLocationManager manager, CLLocation location, AMapLocationReGeocode reGeocode)
         {
             if (reGeocode != null)
             {
